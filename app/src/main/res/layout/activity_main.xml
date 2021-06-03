@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <!-- Input -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INSERT DATA"
+        android:textSize="20pt"
+        android:textStyle="bold"
+
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:id="@+id/judul"/>
+
+    <ImageView
+        android:layout_width="800px"
+        android:layout_height="500px"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gambar"
+        android:src="@drawable/gameday"
+        android:layout_below="@+id/judul"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:hint="Player Name"
+        android:layout_below="@+id/gambar"/>
+
+    <EditText
+        android:id="@+id/et_division"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:hint="Divison"
+        android:layout_below="@+id/et_name"/>
+
+    <EditText
+        android:id="@+id/et_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:hint="Team Name"
+        android:layout_below="@+id/et_division"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_submit"
+        android:text="INSERT"
+        android:background="@color/purple_700"
+        android:layout_below="@+id/et_team"/>
+    <!-- Output -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_submit"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/cardview_shadow_end_color"></androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
